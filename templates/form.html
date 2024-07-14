@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>DIABETES PROJECT BY RAKSHITA</title>
+     <style>
+      body {
+           background-color:#fff5;
+           background-image:url('https://cdn.glitch.global/566fcb64-5b7a-471d-bec8-6c112bbe1275/aiml6.jpeg?v=1720353812564');
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-position: center;
+           fliter:blur(10px);
+          }
+       table{
+          position:relative;
+          top:10px;
+          width:30%;
+          height:20%;
+          #for_blur
+          background:transparent;
+          backdrop-filter: blur(20px);
+          border:2px solid black;
+          border-radius: 6px;
+          font-weight:20px;
+          color:#fff;
+          }
+    </style>
+</head>
+  
+  <body>
+    <h1 align="center" style="color:white;">
+     <u>DIABETES PREDICTION (LINEAR REGRESSION)</u>
+    </h1>
+  <br>
+  <center>
+  <form method="POST" action="/predict">
+  <table border="1">
+    <tr><td valign="top">GENDER:
+      </td><td>
+      <input name="gender" type="radio" value="1">MALE<br>
+      <input name="gender" type="radio" value="2">FEMALE<br>
+       <input name="gender" type="radio" value="3">OTHER
+      </td></tr>
+    <tr><td>AGE(0-80)yrs:
+      </td><td>
+      <input name="age" type="number" min="0" max="80" >
+      </td></tr>
+    <tr><td valign="top">HYPERTENSION (0/1):
+      </td><td>
+      <input name="hypertension" type="radio" value="0">0<br>
+      <input name="hypertension" type="radio" value="1">1
+      </td></tr>
+    <tr><td>HEART DISEASE (0/1):
+      </td><td>
+      <input name="heartdisease" type="radio" value="0">0<br>
+      <input name="heartdisease" type="radio" value="1">1
+      </td></tr>
+    <tr><td>SMOKING HISTORY:
+      </td><td valign="top">
+      <input name="smokinghistory" type="radio" value="1">NEVER<br>
+      <input name="smokinghistory" type="radio" value="2">NO INFO<br>
+      <input name="smokinghistory" type="radio" value="3">CURRENT<br>
+      <input name="smokinghistory" type="radio" value="4">FORMER<br>
+      <input name="smokinghistory" type="radio" value="5">EVER<br>
+      <input name="smokinghistory" type="radio" value="6">NOT CURRENT
+      </td></tr>
+    <tr><td>BMI(10-95.7)kg/m^2:
+      </td><td><input name="bmi" type="number" min="10" max="96" >
+      </td></tr>
+    <tr><td>HbA1c LEVEL(3.5-9)mg/dL:
+      </td><td><input name="hba1clevel" type="number" min="3" max="9">
+      </td></tr>
+    <tr><td>BLOOD GLUCOSE LEVEL (80-300)mg/dL:
+      </td><td><input name="bloodglucoselevel" type="number" min="80" max="300">
+      </td></tr>
+    <tr><td colspan="2" align="center"> <input type="submit" value="PREDICT DIABETES"></td></tr>
+    <tr><td colspan="2" align="center"> 
+    <br>
+     {{result}}
+    <br><br></td></tr>
+  </table>
+  </form> 
+   <br>
+     <a href="home">
+    <h3 style="color:white;">
+     HOME PAGE
+       </h3>
+      </a>
+    </center>   
+  </body>
+</html>
+
+
+   
